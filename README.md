@@ -9,6 +9,10 @@
 
 LangChain is overkill for most things. `groq-chain` gives you prompt chaining in plain Python — pass the output of one LLM call into the next, with zero magic.
 
+<div align="center">
+  <img src="./demo.svg" alt="groq-chain demo" width="520"/>
+</div>
+
 ---
 
 ## Install
