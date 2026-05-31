@@ -1,5 +1,6 @@
 # groq-chain
 
+[![PyPI](https://img.shields.io/pypi/v/groq-chain.svg)](https://pypi.org/project/groq-chain/)
 [![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![GitHub](https://img.shields.io/badge/GitHub-iamadhitya1-blue?logo=github)](https://github.com/iamadhitya1)
 ![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?logo=python)
