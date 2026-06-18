@@ -5,7 +5,7 @@
 [![GitHub](https://img.shields.io/badge/GitHub-iamadhitya1-blue?logo=github)](https://github.com/iamadhitya1)
 ![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?logo=python)
 
-> Dead-simple Groq LLM chaining. One dependency. No bloat.
+> Dead-simple Groq LLM chaining in Python. Chain prompts with `.step()` — no LangChain needed.
 
 LangChain is overkill for most things. `groq-chain` gives you prompt chaining in plain Python — pass the output of one LLM call into the next, with zero magic.
 
@@ -15,11 +15,41 @@ LangChain is overkill for most things. `groq-chain` gives you prompt chaining in
 
 ---
 
+## When to use this
+
+Use `groq-chain` when:
+- You need to **chain 2–5 LLM calls** where each step feeds the next (summarize → rewrite → translate)
+- You want **Groq's speed** without the LangChain abstraction overhead
+- You're building **document pipelines, content transforms, or multi-step AI workflows** in pure Python
+- You want something you can read and understand in 10 minutes
+
+Not the right fit if you need agents, tool calling, vector stores, or retrieval — LangChain or LlamaIndex are built for that. `groq-chain` is intentionally a thin wrapper for linear prompt pipelines.
+
+---
+
+## Why not LangChain?
+
+| | groq-chain | LangChain |
+|---|---|---|
+| Install size | 1 dependency (`groq`) | 50+ transitive dependencies |
+| Lines to chain 3 prompts | ~5 | ~40 |
+| Learning curve | Read the README once | Days |
+| Best for | Linear pipelines | Agents, RAG, complex graphs |
+
+If you're chaining prompts, not building an agent, `groq-chain` does it in a fraction of the code.
+
+---
+
 ## Install
 
 ```bash
 pip install groq-chain
 ```
+
+> **Note:** the package is `groq-chain` but the import is `groqchain` (no hyphen):
+> ```python
+> from groqchain import GroqChain
+> ```
 
 Or from source:
 ```bash
@@ -150,7 +180,7 @@ print("Rating:",  results["rating"])
 
 ## Author
 
-**[M. Adhitya](https://iamadhitya.vercel.app)** — Founder of [Rewrite Labs](https://rewritelabs.vercel.app), final-year B.Tech Computer Engineering student at IITRAM Ahmedabad. Builds AI products and open source libraries.
+**[M. Adhitya](https://iamadhitya.vercel.app)** — Founder, [Rewrite Labs](https://rewritelabs.vercel.app)
 
 ## License
 
